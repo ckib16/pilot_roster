@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Location.destroy_all
+
+Location.create({
+  base: "Spangdahlem AB",
+  unit: "52 Fighter Wing",
+  country: "Germany",
+  state: nil,
+  oconus: true,
+  pascode: "1FGD6578",
+  billets: 32
+  })
