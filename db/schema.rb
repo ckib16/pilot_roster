@@ -21,9 +21,10 @@ ActiveRecord::Schema.define(version: 20151115210926) do
     t.string  "unit"
     t.string  "country"
     t.string  "state"
-    t.boolean "oconus",  default: false
+    t.boolean "oconus",     default: false
     t.string  "pascode"
     t.integer "billets"
+    t.string  "emblem_url"
   end
 
   create_table "users", force: :cascade do |t|

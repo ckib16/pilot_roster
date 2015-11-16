@@ -10,10 +10,22 @@ Location.destroy_all
 
 Location.create({
   base: "Spangdahlem AB",
-  unit: "52 Fighter Wing",
+  unit: "52d Fighter Wing",
   country: "Germany",
   state: nil,
   oconus: true,
-  pascode: "1FGD6578",
-  billets: 32
+  pascode: "SPGD6578",
+  billets: 32,
+  emblem_url: "52d_Fighter_Wing.png"
+  })
+
+Location.create({
+  base: "Shaw AFB",
+  unit: "20th Fighter Wing",
+  country: "USA",
+  state: "South Carolina",
+  oconus: false,
+  pascode: "SH69H618",
+  billets: 96,
+  emblem_url: "20th_Fighter_Wing.png"
   })
