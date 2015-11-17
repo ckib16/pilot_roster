@@ -7,6 +7,7 @@ gem 'faker'
 gem 'rails-erd'
 gem 'rails-footnotes'
 gem 'simple_form'
+gem 'rails_12factor'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
