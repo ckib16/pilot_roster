@@ -12,27 +12,29 @@ end
 def create
   @location = Location.new(location_params)
   if @location.save
-    flash[:notice] = "Successfully created..."
-    redirect_to @location
+    redirect_to @location, notice: "Successfully created..."
   else
     render :new
   end
 end
 
 def show
-  
 end
 
 def edit
-  #code
 end
 
 def update
-  #code
+  if @location.update(location_params)
+    redirect_to @location, notice: "Successfully edited..."
+  else
+    render :edit
+  end
 end
 
 def destroy
-  #code
+  @location.destroy
+  redirect_to locations_path
 end
 
 private
