@@ -8,6 +8,7 @@ class CreateLocations < ActiveRecord::Migration
       t.boolean :oconus, default: false
       t.string :pascode
       t.integer :billets
+      t.string :emblem_url
     end
   end
 end

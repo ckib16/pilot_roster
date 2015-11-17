@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<% flash.each do |type, message| %>
+  <p class="<%= type %>"><%=  message %></p>
+<% end %>
+
+<div class="">
+  <%= link_to "Locations", locations_path, class: "btn btn-primary" %>
+</div>
+
 <%= yield %>
 
 </body>

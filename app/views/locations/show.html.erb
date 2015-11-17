@@ -1,0 +1,22 @@
+<h1>Location Show</h1>
+
+<div class="media">
+  <div class="media-left media middle">
+    <a href="#">
+      <%= image_tag("emblems/#{@location.emblem_url}", size: "110") %>
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><%= @location.unit %></h4>
+    <ul class="list-group">
+      <% if @location.state? %>
+        <li class="list-group-item"> <%= @location.base %>, <%= @location.state %>, <%= @location.country %> </li>
+      <%else %>
+        <li class="list-group-item"> <%= @location.base %>, <%= @location.country %> </li>
+      <% end %>
+      <li class="list-group-item"> <%= @location.billets %> Billets </li>
+    </ul>
+  </div>
+</div>
+
+<%= link_to "Edit", edit_location_path(@location), class: "btn btn-warning" %>
