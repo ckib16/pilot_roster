@@ -6,15 +6,21 @@ def index
 end
 
 def new
-
+  @location = Location.new
 end
 
 def create
-  #code
+  @location = Location.new(location_params)
+  if @location.save
+    flash[:notice] = "Successfully created..."
+    redirect_to @location
+  else
+    render :new
+  end
 end
 
 def show
-  #code
+  
 end
 
 def edit

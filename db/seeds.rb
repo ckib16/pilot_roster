@@ -44,7 +44,7 @@ bases = [
     unit:       "35th Fighter Wing",
     country:    "Japan",
     state:      nil,
-    oconus:     false,
+    oconus:     true,
     pascode:    "MW69H618",
     billets:    64,
     emblem_url: "35th_Fighter_Wing_Misawa.png"
