@@ -1,5 +1,6 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :couldnt_find_record
 
 def index
   @locations = Location.all
@@ -44,5 +45,9 @@ private
 
   def location_params
     params.require(:location).permit(:base, :unit, :country, :state, :oconus, :pascode, :billets)
+  end
+
+  def couldnt_find_record
+    redirect_to root_url, notice: "That record doesn't exist!"
   end
 end

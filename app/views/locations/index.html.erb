@@ -3,10 +3,7 @@
 <% @locations.each do |location| %>
   <div class="media">
     <div class="media-left media middle">
-      <a href="#">
-        <!-- <%= image_tag("emblems/52d_Fighter_Wing.png", size: "100") %> -->
-        <%= image_tag("emblems/#{location.emblem_url}", size: "110") %>
-      </a>
+      <%= link_to image_tag("emblems/#{location.emblem_url}", size: "110"), location_path(location) %>
     </div>
     <div class="media-body">
       <h4 class="media-heading"><%= location.unit %></h4>
