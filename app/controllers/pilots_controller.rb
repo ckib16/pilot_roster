@@ -13,7 +13,7 @@ class PilotsController < ApplicationController
     @pilot = Pilot.new
     @location = location.find(params[:id])
     if @pilot.save
-      redirect_to @pilot, :notice "Successfully created..."
+      redirect_to @pilot, notice: "Successfully created..."
     else
       render :new
     end
