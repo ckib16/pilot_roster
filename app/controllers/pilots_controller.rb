@@ -10,8 +10,8 @@ class PilotsController < ApplicationController
   end
 
   def create
-    @pilot = Pilot.new
-    @location = location.find(params[:id])
+    @location = Location.find(params[:location_id])
+    @pilot = @location.pilots.new(pilot_params)
     if @pilot.save
       redirect_to @pilot, notice: "Successfully created..."
     else
