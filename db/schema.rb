@@ -30,11 +30,11 @@ ActiveRecord::Schema.define(version: 20151118021325) do
   create_table "pilots", force: :cascade do |t|
     t.string  "name"
     t.string  "rank"
-    t.boolean "experienced",    default: false
     t.integer "hours"
     t.string  "qualification"
     t.date    "commision_date"
     t.date    "adsc"
+    t.string  "avatar_url"
     t.integer "location_id"
   end
 

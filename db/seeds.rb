@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Location.destroy_all
+Pilot.destroy_all
 
 bases = [
   {
@@ -90,5 +91,28 @@ bases = [
     emblem_url: "388th_Fighter_Wing_Hill.png"
   }
 ]
+Location.create!(bases)
+locations = Location.all
 
-Location.create(bases)
+random_ranks = ["2Lt", "1Lt", "Capt", "Maj", "Lt Col"]
+random_qualifications = ["Wingman", "Flight Lead", "Instructor", "Evaluator"]
+random_hours = (150..2000).to_a.shuffle
+random_gender = ["men", "women"]
+random_photo_number = (1..97).to_a.shuffle
+
+100.times do
+  Pilot.create!(
+    location: locations.sample,
+    name: Faker::Name.name,
+    rank: random_ranks.sample,
+    hours: random_hours.sample,
+    qualification: random_qualifications.sample,
+    commision_date: Faker::Date.backward(3000),
+    adsc: Faker::Date.forward(1000),
+    avatar_url: "http://api.randomuser.me/portraits/med/#{random_gender.sample}/#{random_photo_number.sample}.jpg"
+  )
+end
+
+puts "Seed Finished"
+puts "#{Location.count} locations created"
+puts "#{Pilot.count} pilots created"
