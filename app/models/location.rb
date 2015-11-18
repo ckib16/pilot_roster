@@ -4,7 +4,7 @@ class Location < ActiveRecord::Base
 
   default_scope { order('base ASC') }
 
-  has_many :users
+  has_many :pilots
 
 
   # future use variables to breakout locations by country

@@ -1,0 +1,7 @@
+<h1>Pilot Index</h1>
+
+<% @pilots.each do |user| %>
+  <%= pilot.name %>
+<% end %>
+
+<%= link_to "Create New Pilot", new_pilot_path, class: "btn btn-primary" %>
