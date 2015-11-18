@@ -1,6 +1,10 @@
+<% @pilot.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>
+
 <div class="row">
   <div class="col-md-4">
-    <%= form_for @pilot do |f| %>
+    <%= form_for [@location, @pilot] do |f| %>
 
       <div class="form-group">
         <%= f.label :name %>

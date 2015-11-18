@@ -20,12 +20,15 @@ class PilotsController < ApplicationController
   end
 
   def show
+    @location = @pilot.location
   end
 
   def edit
+    @location = @pilot.location
   end
 
   def update
+    @location = Location.find(params[:location_id])
     if @pilot.update(pilot_params)
       redirect_to @pilot, notice: "Successfully edited..."
     else
