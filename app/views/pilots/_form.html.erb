@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-md-4">
+    <%= form_for @pilot do |f| %>
+
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Enter pilot's name" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :rank %>
+        <%= f.text_field :rank, class: "form-control", placeholder: "Enter pilot's rank" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :hours %>
+        <%= f.number_field :hours, class: "form-control", placeholder: "Enter pilot's total number of flight hours" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :qualification %>
+        <%= f.text_field :qualification, class: "form-control", placeholder: "Wingman, Flight Lead, Instructor or Evaluator" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :commision_date %>
+        <%= f.date_select :commision_date, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label "ADSC" %>
+        <%= f.date_select :adsc, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :avatar_url %>
+        <%= f.text_field :avatar_url, class: "form-control", placeholder: "Enter URL for avatar photo" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit "Save / Update", class: "btn btn-success" %>
+      </div>
+    <% end %>
+  </div>
+</div>

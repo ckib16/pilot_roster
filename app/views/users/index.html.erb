@@ -1,7 +1,0 @@
-<h1>Users Index</h1>
-
-<% @users.each do |user| %>
-  <%= user.email %>
-<% end %>
-
-<%= link_to "Create New User", new_user_registration_path, class: "btn btn-primary" %>

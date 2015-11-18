@@ -2,13 +2,15 @@
 
 <div class="media">
   <div class="media-left media middle">
-    <%= link_to image_tag("#{@pilot.avatar_url}", size: "110"), pilot_path(@pilot) %>
+    <%= image_tag("#{@pilot.avatar_url}", size: "110") %>
   </div>
   <div class="media-body">
     <h4 class="media-heading"><%= @pilot.rank %> <%= @pilot.name %></h4>
     <ul class="list-group">
       <li class="list-group-item"> <%= @pilot.location.base %> </li>
       <li class="list-group-item"> <%= @pilot.qualification %>, <%= @pilot.hours %> Hours</li>
+      <li class="list-group-item"> Commision Date: <%= @pilot.commision_date %> </li>
+      <li class="list-group-item"> ADSC: <%= @pilot.adsc %> </li>
     </ul>
   </div>
 </div>
