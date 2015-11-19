@@ -100,10 +100,10 @@ random_hours = (150..2000).to_a.shuffle
 random_gender = ["men", "women"]
 random_photo_number = (1..97).to_a.shuffle
 
-100.times do
+50.times do
   Pilot.create!(
     location: locations.sample,
-    name: Faker::Name.name,
+    name: Faker::Name.last_name,
     rank: random_ranks.sample,
     hours: random_hours.sample,
     qualification: random_qualifications.sample,
