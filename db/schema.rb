@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115210926) do
+ActiveRecord::Schema.define(version: 20151118021325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,19 @@ ActiveRecord::Schema.define(version: 20151115210926) do
     t.integer "billets"
     t.string  "emblem_url"
   end
+
+  create_table "pilots", force: :cascade do |t|
+    t.string  "name"
+    t.string  "rank"
+    t.integer "hours"
+    t.string  "qualification"
+    t.date    "commision_date"
+    t.date    "adsc"
+    t.string  "avatar_url"
+    t.integer "location_id"
+  end
+
+  add_index "pilots", ["location_id"], name: "index_pilots_on_location_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -45,4 +58,5 @@ ActiveRecord::Schema.define(version: 20151115210926) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "pilots", "locations"
 end

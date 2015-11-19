@@ -20,6 +20,7 @@ def create
 end
 
 def show
+  @pilots = @location.pilots
 end
 
 def edit

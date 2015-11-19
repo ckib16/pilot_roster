@@ -1,10 +1,10 @@
 class Location < ActiveRecord::Base
-  validates :base, :unit, :country, :pascode, :billets, :emblem_url, presence: true
+  validates :base, :unit, :country, :pascode, :billets, presence: true
   validates :billets, numericality: {only_integer: true, greater_than_or_equal_to: 0}
 
-  # default_scope { order('base ASC') }
+  default_scope { order('base ASC') }
 
-  has_many :users
+  has_many :pilots
 
 
   # future use variables to breakout locations by country
