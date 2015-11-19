@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>PilotTracker</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en" style="height:100%;">
+  <head>
+    <meta charset="utf-8">
+    <title>Pilot Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="pinegrow, blocks, bootstrap" />
+    <meta name="description" content="My new website" />
+    <link rel="shortcut icon" href="ico/favicon.png">
+    <!-- Core CSS -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet">
+    <!-- Style Library -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
 
+<body data-spy="scroll" data-target="nav">
+
+  <%= render "shared/navigation_bar" %>
   <%= render "shared/flash" %>
-
-  <div>
-    <% if current_user %>
-      Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign In", new_user_session_path %> or
-      <%= link_to "Sign Up", new_user_registration_path %>
-    <% end %>
-  </div>
-
-  <div>
-    <%= link_to "Locations", locations_path, class: "btn btn-primary" %>
-  </div>
-  <div>
-    <%= link_to "Pilots", pilots_path, class: "btn btn-primary" %>
-  </div>
 
 <%= yield %>
 
