@@ -1,7 +1,7 @@
 class Location < ActiveRecord::Base
   validates :base, :unit, :country, :pascode, :billets, presence: true
   validates :billets, numericality: {only_integer: true, greater_than_or_equal_to: 0}
-
+#nice validation and flash messages!
   default_scope { order('base ASC') }
 
   has_many :pilots
