@@ -7,13 +7,14 @@ class PilotsController < ApplicationController
 
   def new
     @pilot = Pilot.new
+    @location = Location.find(params[:location_id])
   end
 
   def create
     @location = Location.find(params[:location_id])
     @pilot = @location.pilots.new(pilot_params)
     if @pilot.save
-      redirect_to @pilot, notice: "Successfully created..."
+      redirect_to pilot_path(@pilot), notice: "Successfully created..."
     else
       render :new
     end
