@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   resources :pilots, only: [:index, :edit, :show, :destroy]
 
-  root 'locations#index'
+  get 'about' => 'welcome#about'
+  root to: 'welcome#index'
 end

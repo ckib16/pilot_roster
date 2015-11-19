@@ -1,4 +1,4 @@
-class LocationsController < ApplicationController
+class LocationsController < ApplicationController 
   before_action :set_location, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :couldnt_find_record
 
