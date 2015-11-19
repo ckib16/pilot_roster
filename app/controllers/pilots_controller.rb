@@ -1,5 +1,4 @@
 class PilotsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_pilot, only: [:show, :edit, :update, :destroy]
 
   def index

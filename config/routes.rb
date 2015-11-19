@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :pilots, only: [:index, :edit, :show, :destroy]
 
   get 'about' => 'welcome#about'
-  root to: 'welcome#index'
+  root to: 'locations#index'
 end
