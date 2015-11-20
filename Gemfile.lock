@@ -116,8 +116,6 @@ GEM
       activesupport (>= 3.2)
       choice (~> 0.2.0)
       ruby-graphviz (~> 1.2)
-    rails-footnotes (4.1.7)
-      rails (>= 3.2)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
     rails_12factor (0.0.3)
@@ -185,7 +183,6 @@ DEPENDENCIES
   pg
   rails (= 4.2.4)
   rails-erd
-  rails-footnotes
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

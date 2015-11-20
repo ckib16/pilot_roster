@@ -5,7 +5,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'autoprefixer-rails'
 gem 'faker'
 gem 'rails-erd'
-gem 'rails-footnotes'
+# gem 'rails-footnotes'
 gem 'rails_12factor'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

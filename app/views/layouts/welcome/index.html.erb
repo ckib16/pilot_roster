@@ -2,7 +2,7 @@
 <html lang="en" style="height:100%;">
   <head>
     <meta charset="utf-8">
-    <title>Pilot Tracker</title>
+    <title>Pilot Roster</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="pinegrow, blocks, bootstrap" />
     <meta name="description" content="My new website" />
@@ -18,6 +18,19 @@
   </head>
 
   <body data-spy="scroll" data-target="nav">
-    
+    <section id="promo-3" class="content-block promo-3 min-height-700px">
+
+      <video autoplay loop poster="/assets/bcrs.jpg" id="bgvid">
+          <source src="/assets/bcrs.mp4" type="video/mp4">
+      </video>
+      <div class="container pg-empty-placeholder"></div>
+      <div class="container pg-empty-placeholder"></div>
+      <div class="container pg-empty-placeholder"></div>
+      <div class="container pg-empty-placeholder"><h1>Pilot Roster</h1></div>
+      <div class="container">
+        <%= link_to "Take Off", locations_path, class: "btn btn-outline btn-outline-xl outline-light bg-offwhite-hover bg-concrete" %>
+      </div>
+      <!-- /.container -->
+    </section>
   </body>
 </html>
