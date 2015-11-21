@@ -17,8 +17,7 @@ video#bgvid {
     z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    // background: url(bcrs.jpg) no-repeat;
-    background-image: image-url("bcrs.jpg") no-repeat;
+    background-image: asset-url("bcrs.jpg") no-repeat;
     background-size: cover;
     opacity: 50%;
 }
