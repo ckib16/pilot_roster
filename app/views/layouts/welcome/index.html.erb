@@ -20,9 +20,10 @@
   <body data-spy="scroll" data-target="nav">
     <section id="promo-3" class="content-block promo-3 min-height-700px">
 
-      <video autoplay loop poster="/assets/bcrs.jpg" id="bgvid">
+      <!-- <video autoplay loop poster="/assets/bcrs.jpg" id="bgvid">
           <source src="/assets/bcrs.mp4" type="video/mp4">
-      </video>
+      </video> -->
+      <%= video_tag "bcrs.mp4", controls: true, autobuffer: true, id: "bgvid"%>
       <div class="container pg-empty-placeholder"></div>
       <div class="container pg-empty-placeholder"></div>
       <div class="container pg-empty-placeholder"></div>
