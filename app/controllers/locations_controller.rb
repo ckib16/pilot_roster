@@ -1,5 +1,6 @@
-class LocationsController < ApplicationController 
+class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
+  # This may be an appropriate thing to put in your application controller so that all controllers inherit from it
   rescue_from ActiveRecord::RecordNotFound, with: :couldnt_find_record
 
 def index
@@ -37,6 +38,8 @@ end
 def destroy
   @location.destroy
   redirect_to locations_path
+  # This throws a "foreign key constraint" error. See:
+  # http://stackoverflow.com/a/29544875/2053389
 end
 
 private

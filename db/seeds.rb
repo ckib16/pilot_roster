@@ -102,6 +102,7 @@ random_photo_number = (1..97).to_a.shuffle
 
 50.times do
   Pilot.create!(
+  # Nice
     location: locations.sample,
     name: Faker::Name.last_name,
     rank: random_ranks.sample,
@@ -110,6 +111,7 @@ random_photo_number = (1..97).to_a.shuffle
     commision_date: Faker::Date.backward(3000),
     adsc: Faker::Date.forward(1000),
     avatar_url: "http://api.randomuser.me/portraits/med/#{random_gender.sample}/#{random_photo_number.sample}.jpg"
+    # Niiiiiiiiiiiice
   )
 end
 
