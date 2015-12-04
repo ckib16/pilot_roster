@@ -7,6 +7,11 @@
     <div class="col-md-4">
       <%= form_for @location do |f| %>
         <div class="form-group">
+          <!--
+          One thing I hate about form_for is that it doesn't automate the creation of labels AND inputs.
+          Could you write a helper method (app/helpers/application_helpers.rb) to do this for you so you don't need to write both f.label and f.text_field a thousand times?
+          That would also let you avoid having to write `class: "control-label"` a thousand times...
+          -->
           <%= f.label :base, class: "control-label" %>
           <%= f.text_field :base, autofocus: true, class: 'form-control', placeholder: "Enter air base name - Ex: 'Kunan AB'" %>
         </div>
