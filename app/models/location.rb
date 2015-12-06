@@ -9,4 +9,5 @@ class Location < ActiveRecord::Base
   # future use variables to breakout locations by country
   # @oconus = Location.where(oconus: true)
   # @stateside = Location.where(oconus: false)
+  # TODO - add validation for :emblem_url & oconus
 end
