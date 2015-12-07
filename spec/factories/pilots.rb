@@ -8,5 +8,9 @@ FactoryGirl.define do
     commision_date { Faker::Date.backward(3000) }
     adsc { Faker::Date.forward(1000) }
     avatar_url { Faker::Avatar.image }
+
+    factory :invalid_pilot do
+      name nil
+    end
   end
 end

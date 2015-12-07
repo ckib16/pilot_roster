@@ -42,7 +42,8 @@ class PilotsController < ApplicationController
     redirect_to pilots_path
   end
 
-private
+  private
+
   def set_pilot
     @pilot = Pilot.find(params[:id])
   end
@@ -50,5 +51,4 @@ private
   def pilot_params
     params.require(:pilot).permit(:name, :rank, :experienced, :hours, :qualification, :commision_date, :adsc)
   end
-
 end
