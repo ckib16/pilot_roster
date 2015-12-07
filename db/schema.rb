@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20151118021325) do
     t.string  "unit"
     t.string  "country"
     t.string  "state"
-    t.boolean "oconus",     default: false
+    t.boolean "oconus",     default: false, null: false
     t.string  "pascode"
     t.integer "billets"
     t.string  "emblem_url"

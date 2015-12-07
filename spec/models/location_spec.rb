@@ -8,20 +8,17 @@ describe Location do
   it { should validate_presence_of(:base) }
   it { should validate_presence_of(:unit) }
   it { should validate_presence_of(:country) }
-  it { should validate_presence_of(:state) }
   it { should validate_presence_of(:pascode) }
   it { should validate_presence_of(:billets) }
+  it { should validate_numericality_of(:billets).is_greater_than_or_equal_to(0) }
+  it { should validate_numericality_of(:billets).only_integer }
+
+  # Kept because shoulda-matchers is returning an error for integer
+  it "is invalid without billets inputed as an integer" do
+    pilot = build(:location, billets: 0.1)
+    pilot.valid?
+    expect(pilot.errors[:billets]).to include("must be an integer")
+  end
+
   it { should validate_presence_of(:emblem_url) }
-
-  it 'is invalid without an oconus  designation (boolean)' do
-    location = build(:location, oconus: nil)
-    location.valid?
-    expect(location.errors[:oconus]).to include "is not included in the list"
-  end
-
-  it 'is invalid with a negative integer in billets' do
-    location = build(:location, billets: -1)
-    location.valid?
-    expect(location.errors[:billets]).to include "must be greater than or equal to 0"
-  end
 end
