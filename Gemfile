@@ -44,6 +44,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'rack-mini-profiler'
+  gem 'flamegraph'
 end
 
 group :development do
