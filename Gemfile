@@ -42,7 +42,6 @@ group :development, :test do
   gem 'byebug'
   gem 'factory_girl_rails'
   gem 'faker'
-  gem 'flamegraph'
   gem 'cucumber-rails', require: false
   gem 'rack-mini-profiler'
   gem 'rails-footnotes'
