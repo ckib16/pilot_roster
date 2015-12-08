@@ -8,6 +8,10 @@ describe Pilot do
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:rank) }
   it { should validate_presence_of(:hours) }
+  it { should validate_presence_of(:qualification) }
+  it { should validate_presence_of(:commision_date) }
+  it { should validate_presence_of(:adsc) }
+  it { should validate_presence_of(:avatar_url) }
 
   # TODO:  Bug in shoulda-matchers, filed issue: https://github.com/thoughtbot/shoulda-matchers/issues/849#issuecomment-162898918
   # it { should validate_numericality_of(:hours).only_integer }
@@ -25,9 +29,4 @@ describe Pilot do
     pilot.valid?
     expect(pilot.errors[:hours]).to include("must be greater than or equal to 0")
   end
-
-  it { should validate_presence_of(:qualification) }
-  it { should validate_presence_of(:commision_date) }
-  it { should validate_presence_of(:adsc) }
-  it { should validate_presence_of(:avatar_url)}
 end
