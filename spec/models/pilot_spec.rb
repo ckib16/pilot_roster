@@ -1,9 +1,10 @@
 require "rails_helper"
 
 describe Pilot do
-  it "has a valid factory" do
-    expect(build(:pilot)).to be_valid
-  end
+  # TODO: not needed if lint factories?
+  # it "has a valid factory" do
+  #   expect(build(:pilot)).to be_valid
+  # end
 
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:rank) }
