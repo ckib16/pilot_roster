@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'devise'
-gem 'bootstrap-sass', '~> 3.3.5'
 gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'devise'
 gem 'rails-erd'
 gem 'rails_12factor'
 
