@@ -1,10 +1,8 @@
 require 'rails_helper'
 
 describe Location do
-  # TODO: not needed if lint factories?
-  # it 'has a valid factory' do
-  #   expect(build(:location)).to be_valid
-  # end
+  it "INFO ONLY: 'lints' (validates) its factory - see /support/factory_girl.rb " do
+  end
 
   it { should validate_presence_of(:base) }
   it { should validate_presence_of(:unit) }

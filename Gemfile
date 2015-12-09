@@ -40,9 +40,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'cucumber-rails', require: false
   gem 'factory_girl_rails'
   gem 'faker'
-  gem 'cucumber-rails', require: false
   gem 'rack-mini-profiler'
   gem 'rails-footnotes'
   gem 'rspec-rails'
