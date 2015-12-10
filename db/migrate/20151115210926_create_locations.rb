@@ -5,7 +5,7 @@ class CreateLocations < ActiveRecord::Migration
       t.string :unit
       t.string :country
       t.string :state
-      t.boolean :oconus, default: false
+      t.boolean :oconus, null: false, default: false
       t.string :pascode
       t.integer :billets
       t.string :emblem_url

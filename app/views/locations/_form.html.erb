@@ -47,6 +47,11 @@
         </div>
 
         <div class="form-group">
+          <%= f.label :emblem_url, class: "control-label" %>
+          <%= f.text_field :emblem_url, class: "form-control", placeholder: "Emblem URL" %>
+        </div>
+
+        <div class="form-group">
           <%= f.submit "Save / Update", class: "btn btn-primary" %>
         </div>
       <% end %>
